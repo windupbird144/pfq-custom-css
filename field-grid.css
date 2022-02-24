@@ -1,0 +1,130 @@
+/* Field CSS
+
+Show Pokemon in a grid and create a progress bar*/
+#field_field[data-mode=public] .fieldmon {
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    display: inline-grid !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+}
+
+#field_field[data-mode=public] .fieldmon img {
+    width: 100%;
+    height: 100%;
+    animation: none !important;
+    background: none !important;
+    object-fit: none;
+    object-position: 0 0;
+}
+
+/* each pokemon causes a block to appear to make a progress bar, this is the block */
+#field_field[data-mode=public] .fieldmon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 10px;
+    height: 15px;
+    background: #cc4244;
+    border-right: 2px solid #262626;
+}
+
+/* the color of the block for fed pokemon */
+#field_field[data-mode=public] .fieldmon.nothungry:after {
+    background: #f2da4b;
+}
+
+/* necesarry to make the sprite invisible, but keep the block in the progress bar */
+#field_field[data-mode=public] > div.field > .fieldmon.nothungry {
+    opacity: 1;
+}
+#field_field[data-mode=public] > div.field > .fieldmon.nothungry > img {
+    opacity: 0;
+}
+
+/* draws the progress bar */
+#field_field[data-mode=public] .fieldmon:nth-of-type(2):after { left: 10px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(3):after { left: 20px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(4):after { left: 30px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(5):after { left: 40px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(6):after { left: 50px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(7):after { left: 60px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(8):after { left: 70px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(9):after { left: 80px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(10):after { left: 90px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(11):after { left: 100px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(12):after { left: 110px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(13):after { left: 120px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(14):after { left: 130px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(15):after { left: 140px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(16):after { left: 150px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(17):after { left: 160px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(18):after { left: 170px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(19):after { left: 180px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(20):after { left: 190px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(21):after { left: 200px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(22):after { left: 210px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(23):after { left: 220px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(24):after { left: 230px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(25):after { left: 240px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(26):after { left: 250px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(27):after { left: 260px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(28):after { left: 270px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(29):after { left: 280px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(30):after { left: 290px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(31):after { left: 300px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(32):after { left: 310px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(33):after { left: 320px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(34):after { left: 330px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(35):after { left: 340px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(36):after { left: 350px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(37):after { left: 360px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(38):after { left: 370px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(39):after { left: 380px; }
+#field_field[data-mode=public] .fieldmon:nth-of-type(40):after { left: 390px; }
+
+/* shows pokemon in a grid */
+#field_field[data-mode=public] .fieldmon:nth-of-type(1) img { object-position: 0 0;}
+#field_field[data-mode=public] .fieldmon:nth-of-type(2) img { object-position: 12.5% 0;}
+#field_field[data-mode=public] .fieldmon:nth-of-type(3) img { object-position: 25% 0;}
+#field_field[data-mode=public] .fieldmon:nth-of-type(4) img { object-position: 37.5% 0;}
+#field_field[data-mode=public] .fieldmon:nth-of-type(5) img { object-position: 50% 0;}
+#field_field[data-mode=public] .fieldmon:nth-of-type(6) img { object-position: 62.5% 0;}
+#field_field[data-mode=public] .fieldmon:nth-of-type(7) img { object-position: 75% 0}
+#field_field[data-mode=public] .fieldmon:nth-of-type(8) img { object-position: 87.5% 0}
+#field_field[data-mode=public] .fieldmon:nth-of-type(9) img { object-position: 0 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(10) img { object-position: 12.5% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(11) img { object-position: 25% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(12) img { object-position: 37.5% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(13) img { object-position: 50% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(14) img { object-position: 62.5% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(15) img { object-position: 75% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(16) img { object-position: 87.5% 20%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(17) img { object-position: 0 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(18) img { object-position: 12.5% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(19) img { object-position: 25% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(20) img { object-position: 37.5% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(21) img { object-position: 50% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(22) img { object-position: 62.5% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(23) img { object-position: 75% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(24) img { object-position: 87.5% 40%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(25) img { object-position: 0 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(26) img { object-position: 12.5% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(27) img { object-position: 25% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(28) img { object-position: 37.5% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(29) img { object-position: 50% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(30) img { object-position: 62.5% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(31) img { object-position: 75% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(32) img { object-position: 87.5% 60%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(33) img { object-position: 0 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(34) img { object-position: 12.5% 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(35) img { object-position: 25% 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(36) img { object-position: 37.5% 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(37) img { object-position: 50% 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(38) img { object-position: 62.5% 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(39) img { object-position: 75% 80%}
+#field_field[data-mode=public] .fieldmon:nth-of-type(40) img { object-position: 87.5% 80%}
